@@ -54,7 +54,7 @@ function bai9(){
     let soA = +document.getElementById("soA").value
     let soB = +document.getElementById("soB").value
     let soC = +document.getElementById("soC").value
-    if(soA==0 || soB==0 || soC == 0){
+    if(soA<=0 || soB<=0 || soC <= 0){
         document.getElementById("bai9").innerHTML = "Ba số a, b, c vừa nhập không phải là cạnh của tam giác"
     }
     else if (soA + soB < soC || soA + soC < soB || soB + soC < soA){
