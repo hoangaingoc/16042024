@@ -39,11 +39,28 @@ function bai6(){
     if(so_a==0&&so_b==0) {
         document.getElementById("bai6").innerHTML = "Vô số nghiệm"
     }
+}function bai7(){
+    let s_a = +document.getElementById("s_a").value
+    let s_b = +document.getElementById("s_b").value
+    let s_c = +document.getElementById("s_c").value
+    let delta = Math.pow(s_b,2) - 4 * s_a * s_c
+    if(delta < 0){
+        document.getElementById("bai7").innerHTML = "Phương trình vô nghiệm"
+    }
+    if(delta === 0) {
+        let x0 = -s_b / (2 * s_a)
+        document.getElementById("bai7").innerHTML = "Phương trình có 1 nghiệm kép: x1 = x2 = " + x0
+    }
+    if(delta >  0) {
+        let x1 = ( -s_b + Math.sqrt(delta)) / (2 *s_a)
+        let x2 = ( -s_b - Math.sqrt(delta)) / (2 *s_a)
+        document.getElementById("bai7").innerHTML = "Phương trình có 2 nghiệm: x1 = " + x1 + "và x2 = " +x2
+    }
 }
 function bai8(){
     let t = +document.getElementById("t").value
     let kt
-    if(t<=0 || t>=100){
+    if(t<=0 || t>=120){
         document.getElementById("bai8").innerHTML = t+" không phải là số tuổi của một người"
     }
     else {
